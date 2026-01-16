@@ -1,0 +1,16 @@
+# Python virtual environment
+myenv/
+
+# History and editor folders
+.history/
+.vscode/
+
+# Node / frontend
+node_modules/
+dist/
+*.log
+
+# Python / backend
+__pycache__/
+*.pyc
+.env
