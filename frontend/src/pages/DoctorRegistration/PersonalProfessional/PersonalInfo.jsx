@@ -1,7 +1,7 @@
-import InputField from "./InputField";
 import { FiUser } from "react-icons/fi";
+import InputField from "../../../component/InputField";
 
-const Personal_Info = () => {
+const PersonalInfo = () => {
   return (
     <>
       <div className="flex gap-2 items-center pb-4">
@@ -45,4 +45,4 @@ const Personal_Info = () => {
   );
 };
 
-export default Personal_Info;
+export default PersonalInfo;

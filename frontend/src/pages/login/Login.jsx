@@ -2,14 +2,14 @@ import { useState } from "react";
 import { FiUserPlus } from "react-icons/fi";
 import "./style.css";
 import { Link } from "react-router-dom";
-import InputField from "../DoctorRegistration/InputField";
+import InputField from "../../component/InputField";
 
 const Login = () => {
   const [isDoctor, setDoctor] = useState(true);
 
   return (
     <>
-      <div className="flex bg-blue-100 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+      <div className="flex bg-blue-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div className="relative p-4 w-full md:w-120 max-h-full">
           <div className=" bg-white relative bg-neutral-primary-soft  rounded-xl shadow-2xl p-4 md:p-6">
             <div className="flex flex-col items-center justify-between pb-4 md:pb-5">

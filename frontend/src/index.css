@@ -1,0 +1,8 @@
+.next-btn {
+  background-color: #2563eb !important;
+  height: 44px !important;
+  width: 100px;
+}
+.next-btn:hover {
+  background-color: #1d4ed8 !important;
+}

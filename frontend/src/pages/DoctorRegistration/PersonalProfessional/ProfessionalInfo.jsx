@@ -1,8 +1,8 @@
-import TextArea from "./TextArea";
-import InputField from "./InputField";
+import InputField from "../../../component/InputField";
+import TextArea from "../../../component/TextArea";
 import { GrDocumentText } from "react-icons/gr";
 
-const Professional_info = () => {
+const ProfessionalInfo = () => {
   return (
     <>
       <div className="flex gap-2 items-center pt-7 pb-4">
@@ -51,4 +51,4 @@ const Professional_info = () => {
   );
 };
 
-export default Professional_info;
+export default ProfessionalInfo;
