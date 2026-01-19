@@ -2,7 +2,7 @@ import { IconField } from "primereact/iconfield";
 import { InputIcon } from "primereact/inputicon";
 import { InputText } from "primereact/inputtext";
 
-const InputField = ({ type, text, placeholder, iconClass = "" }) => {
+const InputField = ({ type, text, placeholder = "", iconClass = "" }) => {
   const renderInputText = () => (
     <InputText
       id={text}
