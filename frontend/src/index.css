@@ -6,3 +6,7 @@
 .next-btn:hover {
   background-color: #1d4ed8 !important;
 }
+
+.my-button .p-button-label {
+  font-weight: 500; /* bold */
+}

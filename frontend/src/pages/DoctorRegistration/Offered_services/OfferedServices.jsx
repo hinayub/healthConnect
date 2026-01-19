@@ -5,7 +5,7 @@ import DoctorAvailability from "./DoctorAvailability";
 const OfferedServices = ({ placeholder, checked, setChecked, icon: Icon }) => {
   return (
     <>
-      <div className="flex flex-col justify-start border border-gray-200 border-2 rounded-lg px-4 py-2">
+      <div className="flex flex-col justify-start border border-gray-200 border-2 rounded-2xl px-4 py-2 bg-blue-50">
         <div className="flex items-center justify-between">
           <div className="flex gap-2 items-center">
             <Icon className="text-blue-400 " size={20} />
@@ -17,7 +17,7 @@ const OfferedServices = ({ placeholder, checked, setChecked, icon: Icon }) => {
             onChange={(e) => setChecked(e.value)}
           />
         </div>
-        <DoctorAvailability />
+        {checked && <DoctorAvailability />}
       </div>
     </>
   );
