@@ -14,29 +14,21 @@ const DoctorAvailability = () => {
   const [schedule, setSchedule] = useState({});
 
   const updateShedule = () => {
-    let slot = `${sheduleData.startTime} - ${sheduleData.endTime}`;
+    if (!sheduleData.day) return;
+
+    const slot = `${sheduleData.startTime} - ${sheduleData.endTime}`;
     const day = sheduleData.day;
-    console.log(`here is slot ${slot}`);
 
-    const addSlot = (day, slot) => {
-      setSchedule((prev) => {
-        const existingSlots = prev[day] || [];
-        if (existingSlots.includes(slot)) return prev;
+    setSchedule((prev) => {
+      const existingSlots = prev[day] || [];
 
-        return {
-          ...prev,
-          [day]: [...existingSlots, slot],
-        };
-      });
-    };
-    Object.keys(schedule).forEach((key) => {
-      console.log(key);
-      const times = schedule[key];
-      if (day == key && !times.includes(slot)) {
-        addSlot(day, slot);
-      }
+      if (existingSlots.includes(slot)) return prev;
+
+      return {
+        ...prev,
+        [day]: [...existingSlots, slot],
+      };
     });
-    addSlot();
   };
 
   return (
@@ -66,11 +58,10 @@ const DoctorAvailability = () => {
               <option value="Monday">Monday</option>
               <option value="Tuesday">Tuesday</option>
               <option value="Wednesday">Wednesday</option>
-              <option value="Thrusday">Thrusday</option>
+              <option value="Thursday">Thursday</option>
               <option value="Friday">Friday</option>
-              <option value="Saturday">Thrusday</option>
               <option value="Saturday">Saturday</option>
-              <option value="Sanday">Sanday</option>
+              <option value="Sunday">Sunday</option>
             </select>
           </div>
           <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 ">
@@ -86,6 +77,7 @@ const DoctorAvailability = () => {
               }
               iconClass="pi pi-clock"
             />
+
             <InputField
               text="End Time"
               type="time"
@@ -104,7 +96,12 @@ const DoctorAvailability = () => {
         <ButtonWithIcon day={sheduleData.day} updateShedule={updateShedule} />
       </div>
       {Object.keys(schedule).map((key) => (
-        <TimeSlotCard key={key} day={key} slots={schedule[key]} />
+        <TimeSlotCard
+          key={key}
+          day={key}
+          slots={schedule[key]}
+          setSchedule={setSchedule}
+        />
       ))}
     </div>
   );

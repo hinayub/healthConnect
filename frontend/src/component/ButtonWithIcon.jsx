@@ -6,7 +6,7 @@ const ButtonWithIcon = ({ day = "", updateShedule }) => {
       label="Add Time Slot"
       icon="pi pi-plus"
       disabled={!day}
-      className="my-button h-11 "
+      className="my-button  "
       onClick={() => updateShedule()}
     />
   );
