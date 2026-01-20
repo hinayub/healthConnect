@@ -15,7 +15,9 @@ const DoctorAvailability = () => {
 
   const updateShedule = () => {
     let slot = `${sheduleData.startTime} - ${sheduleData.endTime}`;
+    const day = sheduleData.day;
     console.log(`here is slot ${slot}`);
+
     const addSlot = (day, slot) => {
       setSchedule((prev) => {
         const existingSlots = prev[day] || [];
@@ -26,15 +28,15 @@ const DoctorAvailability = () => {
           [day]: [...existingSlots, slot],
         };
       });
-
-      Object.keys(schedule).forEach((key) => {
-        console.log(key);
-        const times = schedule[key];
-        if (sheduleData.day == key && !times.includes(slot)) {
-          addSlot(sheduleData.day, slot);
-        }
-      });
     };
+    Object.keys(schedule).forEach((key) => {
+      console.log(key);
+      const times = schedule[key];
+      if (day == key && !times.includes(slot)) {
+        addSlot(day, slot);
+      }
+    });
+    addSlot();
   };
 
   return (
