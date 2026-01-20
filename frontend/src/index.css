@@ -10,3 +10,6 @@
 .my-button .p-button-label {
   font-weight: 500; /* bold */
 }
+.my-button.p-disabled {
+  cursor: not-allowed !important;
+}
