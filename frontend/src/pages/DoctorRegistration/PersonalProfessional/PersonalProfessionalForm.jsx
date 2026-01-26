@@ -15,7 +15,7 @@ const PersonalProfessionalForm = () => {
           </p>
           <Personal_Info />
           <Professional_info />
-          <LinkButton />
+          <LinkButton page="/offeredServices" />
         </div>
       </div>
     </div>

@@ -5,15 +5,16 @@ import { useState } from "react";
 import { FaClinicMedical } from "react-icons/fa";
 import { ImHome } from "react-icons/im";
 import { FaVideo } from "react-icons/fa";
+import LinkButton from "../../../component/LinkButton";
 
-const OfferedSevicesPage = () => {
+const OfferedServicesPage = () => {
   const [offeredVideoSession, setofferedVideoSession] = useState(false);
   const [offeredClinicVisit, setofferedClinicVisit] = useState(false);
   const [offeredHomeVisit, setofferedHomeVisit] = useState(false);
 
   return (
     <div className="min-h-screen flex justify-center  ">
-      <div className="w-4/5 shadow-lg h-1/3   right-0 left-0 mt-1rem h-full ">
+      <div className="page w-3/5 shadow-lg h-1/3  mt-1rem h-full ">
         <div className="relative px-7">
           <h1 className="text-4xl pt-5 font-bold">Doctor Registration</h1>
           <p className="text-gray-500 pt-2 pb-7">
@@ -43,10 +44,11 @@ const OfferedSevicesPage = () => {
               icon={ImHome}
             />
           </div>
+          <LinkButton page="/uploads" />
         </div>
       </div>
     </div>
   );
 };
 
-export default OfferedSevicesPage;
+export default OfferedServicesPage;

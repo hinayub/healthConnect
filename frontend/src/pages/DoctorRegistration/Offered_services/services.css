@@ -1,0 +1,29 @@
+@media (max-width: 869px) {
+  .main-scheduleSet-div {
+    flex-direction: column;
+  }
+  .choose-day {
+    width: 100%;
+  }
+  .start-end-box {
+    width: 100%;
+  }
+  .start-time-box {
+    width: 1/2;
+  }
+  .end-time-box {
+    width: 1/2;
+  }
+}
+
+@media (max-width: 666px) {
+  .start-end-box {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 440px) {
+  .page {
+    width: 100%;
+  }
+}

@@ -3,6 +3,7 @@ import InputField from "../../../component/InputField";
 import ButtonWithIcon from "../../../component/ButtonWithIcon";
 import { IoCalendarOutline } from "react-icons/io5";
 import TimeSlotCard from "./TimeSlotCard";
+import "./services.css";
 
 const DoctorAvailability = () => {
   const [sheduleData, setSheduleData] = useState({
@@ -39,8 +40,8 @@ const DoctorAvailability = () => {
       </h2>
       <div className="border-2 border-blue-300 rounded-2xl p-4 mx-2 my-4 bg-blue-50">
         <h3 className="text-lg font-semi text-gray-900">Add Time Slot</h3>
-        <div className="w-full flex flex-col md:flex-row gap-4 py-4  ">
-          <div className="w-full md:w-1/2">
+        <div className="main-scheduleSet-div w-full flex  gap-4 py-4  ">
+          <div className="choose-day w-1/3">
             <label className="block mb-2 text-sm font-medium text-gray-600">
               Select day
             </label>
@@ -64,32 +65,35 @@ const DoctorAvailability = () => {
               <option value="Sunday">Sunday</option>
             </select>
           </div>
-          <div className="w-full md:w-1/2 flex flex-col sm:flex-row gap-4 ">
-            <InputField
-              text="Start Time"
-              type="time"
-              data={sheduleData.startTime}
-              setData={(value) =>
-                setSheduleData((prev) => ({
-                  ...prev,
-                  startTime: value,
-                }))
-              }
-              iconClass="pi pi-clock"
-            />
-
-            <InputField
-              text="End Time"
-              type="time"
-              data={sheduleData.endTime}
-              setData={(value) =>
-                setSheduleData((prev) => ({
-                  ...prev,
-                  endTime: value,
-                }))
-              }
-              iconClass="pi pi-clock"
-            />
+          <div className="start-end-box w-2/3 flex gap-4 ">
+            <div className="start-time-box w-full w-1/2 ">
+              <InputField
+                text="Start Time"
+                type="time"
+                data={sheduleData.startTime}
+                setData={(value) =>
+                  setSheduleData((prev) => ({
+                    ...prev,
+                    startTime: value,
+                  }))
+                }
+                iconClass="pi pi-clock"
+              />
+            </div>
+            <div className="end-time-box w-full w-1/2">
+              <InputField
+                text="End Time"
+                type="time"
+                data={sheduleData.endTime}
+                setData={(value) =>
+                  setSheduleData((prev) => ({
+                    ...prev,
+                    endTime: value,
+                  }))
+                }
+                iconClass="pi pi-clock"
+              />
+            </div>
           </div>
         </div>
 
