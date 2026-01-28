@@ -14,7 +14,7 @@ const OfferedServicesPage = () => {
 
   return (
     <div className="min-h-screen flex justify-center  ">
-      <div className="page w-3/5 shadow-lg h-1/3  mt-1rem h-full ">
+      <div className="page w-3/5 shadow-lg h-1/3 rounded-xl mt-1rem h-full bg-white">
         <div className="relative px-7">
           <h1 className="text-4xl pt-5 font-bold">Doctor Registration</h1>
           <p className="text-gray-500 pt-2 pb-7">
@@ -22,7 +22,7 @@ const OfferedServicesPage = () => {
           </p>
           <div className="flex gap-2 items-center pb-4">
             <MdMedicalServices className="text-blue-600 h-6 w-6" />
-            <h3 className="text-xl font-bold">Personal Information</h3>
+            <h3 className="text-xl font-bold">Offeres Services</h3>
           </div>
           <div className="px-4 flex flex-col gap-4">
             <OfferedServices
