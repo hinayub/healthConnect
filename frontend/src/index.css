@@ -1,10 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .next-btn {
-  background-color: #2563eb !important;
+  /* background-color: #2563eb !important; */
   height: 44px !important;
   width: 100px;
 }
 .next-btn:hover {
-  background-color: #1d4ed8 !important;
+  /* background-color: #1d4ed8 !important; */
 }
 
 .my-button .p-button-label {
