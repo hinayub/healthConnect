@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <div>
       <Navbar />
-      <main className="pt-30 bg-blue-50">
+      <main className="pt-32 bg-blue-50">
         <Outlet />
       </main>
       {/* footer */}

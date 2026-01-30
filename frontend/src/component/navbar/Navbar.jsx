@@ -3,16 +3,13 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   return (
     <>
-      <nav className="fixed w-full z-20 top-0 start-0 border-b border-b-gray-200 shadow-lg bg-primary">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2 ">
+      <nav className="fixed w-full z-20 top-0 start-0 border-b border-b-gray-200 shadow-lg bg-white px-10">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto  ">
           <a
             href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-3 rtl:space-x-reverse "
           >
-            <img src={logo} className="h-15 w-15" />
-            <span className="font-lg font-bold tracking-wide">
-              HealthConnect
-            </span>
+            <img src={logo} className="h-20 w-15" />
           </a>
           <button
             data-collapse-toggle="navbar-default"
@@ -44,7 +41,7 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white bg-primary-500 rounded md:bg-transparent md:text-primary-600 md:p-0"
+                  className="block py-2 px-3   rounded md:bg-transparen text-text-nearBlack md:p-0"
                   aria-current="page"
                 >
                   Home
@@ -53,33 +50,17 @@ const Navbar = () => {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0 md:hover:text-primary-600 md:p-0 md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0  text-text-nearBlack md:p-0 md:dark:hover:bg-transparent"
                 >
-                  About
+                  Find Doctor
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0 md:hover:text-primary-600 md:p-0 md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0  text-text-nearBlack md:p-0 md:dark:hover:bg-transparent"
                 >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-gray-900 text-white rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0 md:hover:text-primary-600 md:p-0 md:dark:hover:bg-transparent"
-                >
-                  Pricing
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block py-2 px-3 text-white rounded hover:bg-primary-400 md:hover:bg-transparent md:border-0 md:hover:text-primary-600 md:p-0 md:dark:hover:bg-transparent"
-                >
-                  Contact
+                  Dashboard
                 </a>
               </li>
             </ul>

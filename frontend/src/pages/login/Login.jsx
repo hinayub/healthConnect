@@ -9,17 +9,17 @@ const Login = () => {
 
   return (
     <>
-      <div className="flex bg-blue-50 overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div className="relative p-4 w-full md:w-120 max-h-full">
+      <div className="flex bg-blue-50 overflow-y-auto overflow-x-hidden fixed  justify-center items-center w-full ">
+        <div className="relative w-112 p-4  md:w-120 max-h-full">
           <div className=" bg-white relative bg-neutral-primary-soft  rounded-xl shadow-2xl p-4 md:p-6">
             <div className="flex flex-col items-center justify-between pb-4 md:pb-5">
               <h2 className="text-3xl mb-2 text-black font-semibold">
                 Welcome to HealthConnect
               </h2>
               <p className="text-grey">Sign in to continue</p>
-              <div className="mt-4 flex w-full h-13 bg-gray-100 rounded-lg justify-around items-center">
+              <div className="mt-4 flex w-full h-12 bg-gray-100 rounded-lg justify-around items-center">
                 <div
-                  className={`w-1/2 flex items-center justify-center h-11 rounded-lg ml-1 cursor-pointer ${
+                  className={`w-1/2 flex items-center justify-center h-10 rounded-lg ml-1 cursor-pointer ${
                     isDoctor ? "bg-white text-blue-600" : ""
                   }`}
                   onClick={() => setDoctor(true)}
@@ -27,7 +27,7 @@ const Login = () => {
                   Doctor
                 </div>
                 <div
-                  className={`w-1/2 flex items-center justify-center h-11 rounded-lg mr-1 cursor-pointer  ${
+                  className={`w-1/2 flex items-center justify-center h-10 rounded-lg mr-1 cursor-pointer  ${
                     isDoctor == false ? "bg-white text-blue-600" : ""
                   }`}
                   onClick={() => setDoctor(false)}

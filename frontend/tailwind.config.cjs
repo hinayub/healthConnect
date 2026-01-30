@@ -32,6 +32,11 @@ module.exports = {
           950: "#011014",
           DEFAULT: "#088395",
         },
+        text: {
+          white: "#FFFFFF",
+          nearBlack: "#414141",
+          gray: "#9CA3AF",
+        },
         light: {
           50: "#fafafa",
           100: "#f4f4f5",
